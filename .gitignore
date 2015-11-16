@@ -1,0 +1,9 @@
+pkg
+src/github.com/gin-gonic/
+src/github.com/manucorporat/
+src/github.com/mattn/
+src/golang.org/
+src/gopkg.in/
+*.iml
+*.ipr
+*.iws
