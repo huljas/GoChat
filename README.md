@@ -34,7 +34,7 @@ go install github.com/huljas/gochat
 bin/gochat
 ```
 
-5. Open your browser at http://localhost:5000/ . You can use multiple browser tabs to chat.
+5. Open your browser at [http://localhost:5000/](http://localhost:5000/). You can use multiple browser tabs to chat.
 
 [Gin]: https://github.com/gin-gonic/gin
 [Gorilla Websocket]: https://github.com/gorilla/websocket
