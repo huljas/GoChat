@@ -9,32 +9,32 @@ Comes with a simple AngularJS front end.
 
 ## Running it
 
-1. Set go path
+Set go path
 
 ```sh
 GOPATH=/path/to/the/gochat
 ```
 
-2. Get the dependencies
+Get the dependencies
 
 ```sh
 go get github.com/gin-gonic/gin
 go get github.com/gorilla/websocket
 ```
 
-3. Build it
+Build it
 
 ```sh
 go install github.com/huljas/gochat
 ```
 
-4. Run it
+Run it
 
 ```sh
 bin/gochat
 ```
 
-5. Open your browser at [http://localhost:5000/](http://localhost:5000/). You can use multiple browser tabs to chat.
+Open your browser at [http://localhost:5000/](http://localhost:5000/). You can use multiple browser tabs to chat.
 
 [Gin]: https://github.com/gin-gonic/gin
 [Gorilla Websocket]: https://github.com/gorilla/websocket
