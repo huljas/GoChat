@@ -1,22 +1,18 @@
 angular.module('admin').config(function($stateProvider, $urlRouterProvider) {
     'use strict';
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
-        .state('admin', {
+        .state('chat', {
             url: '',
             templateUrl: 'navigation.html',
             abstract: true
         })
-        .state('admin.home', {
-            url: '/home',
+        .state('chat.home', {
+            url: '/',
             controller: 'HomeCtrl',
-            controllerAs: 'vm',
+            controllerAs: 'ctrl',
             templateUrl: 'apps/home/home.html'
-        })
-        .state('admin.metrics', {
-            url: '/metrics',
-            templateUrl: 'apps/metrics/metrics.html'
         });
 });

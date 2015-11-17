@@ -4,6 +4,11 @@ src/github.com/manucorporat/
 src/github.com/mattn/
 src/golang.org/
 src/gopkg.in/
+src/github.com/gorilla/
 *.iml
 *.ipr
 *.iws
+bin/
+bower_components/
+dist/
+node_modules/

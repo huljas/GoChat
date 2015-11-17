@@ -1,32 +1,36 @@
 package main
 
-import (
-)
+import ()
 
 type Player struct {
 	Id   int    `json:"id"`
 	Nick string `json:"nick"`
 }
 
+/**
+ * Data access interface for the player.
+ */
 type PlayerService interface {
 	Create(nick string) *Player
-
 	Update(id int, nick string) *Player
-
 	List() []*Player
-
 	Find(nick string) *Player
-
 	Get(id int) *Player
 }
 
+/**
+ * Creates a new PlayerService, LocalPlayerService in this example.
+ */
 func GetPlayerService() PlayerService {
-    players := make([]*Player, 0)
-    return &LocalPlayerService{1, players}
+	players := make([]*Player, 0)
+	return &LocalPlayerService{1, players}
 }
 
+// Our singleton playerService
+var playerService PlayerService = GetPlayerService()
+
 /**
- * Service which keeps the players in memory
+ * Fake service which keeps the players in memory instead of database.
  */
 type LocalPlayerService struct {
 	index   int

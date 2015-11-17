@@ -47,11 +47,11 @@ func TestListPlayers(t *testing.T) {
 }
 
 func TestUpdatePlayer(t *testing.T) {
-    var service PlayerService = GetPlayerService()
-    player := service.Create("foobar")
-    service.Update(player.Id, "barbar")
-    found := service.Get(player.Id)
-    if found.Nick != "barbar" {
-        t.Fatalf("nick should be updated")
-    }
+	var service PlayerService = GetPlayerService()
+	player := service.Create("foobar")
+	service.Update(player.Id, "barbar")
+	found := service.Get(player.Id)
+	if found.Nick != "barbar" {
+		t.Fatalf("nick should be updated")
+	}
 }
