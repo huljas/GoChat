@@ -5,7 +5,7 @@
     </div>
 
     <div ng-hide="ctrl.player.id">
-        <form class="form row">
+        <form class="form row" ng-submit="ctrl.createPlayer()">
             <div class="form-group col-xs-6">
                 <input type="text" class="form-control " id="nick" placeholder="Give your nick" ng-model="ctrl.player.nick">
             </div>
@@ -27,7 +27,7 @@
             <div class="panel-body">
                 <div style="height: 200px; overflow-y: auto;">
                     <div ng-repeat="message in ctrl.messages" style="padding: 5px;">
-                        <strong ng-class="{'text-primary': message.id == ctrl.player.id}" style="width: 200px; text-align: right; margin-right: 5px; display: inline-block;">{{ message.nick }}</strong>
+                        <strong ng-class="{'text-primary': message.id == ctrl.player.id}" style="width: 150px; text-align: right; margin-right: 5px; display: inline-block;">{{ message.nick }}</strong>
                         <span>{{ message.text }}</span>
                     </div>
                     <a id="bottom"></a>

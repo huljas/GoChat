@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"github.com/gorilla/websocket"
 )
 
@@ -66,7 +65,6 @@ func (c *Connection) write() {
 			if !ok {
 				return
 			}
-			fmt.Println("Writing message")
 			if err := c.Conn.WriteMessage(websocket.TextMessage, message); err != nil {
 				return
 			}

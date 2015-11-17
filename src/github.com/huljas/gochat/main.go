@@ -12,10 +12,10 @@ func main() {
 
 	BindChatRoutes(router)
 
-	router.StaticFile("/", "./dist/index.html")
-	router.Static("/js", "./dist/js")
-	router.Static("/css", "./dist/css")
-	router.Static("/fonts", "./dist/fonts")
+	router.StaticFile("/", "./webfe/dist/index.html")
+	router.Static("/js", "./webfe/dist/js")
+	router.Static("/css", "./webfe/dist/css")
+	router.Static("/fonts", "./webfe/dist/fonts")
 
 	go chat.run()
 

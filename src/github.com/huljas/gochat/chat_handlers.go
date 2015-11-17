@@ -36,7 +36,6 @@ func wsConnectHandler(player *Player, writer http.ResponseWriter, req *http.Requ
 		fmt.Println("Failed to set websocket upgrade: %+v", err)
 		return
 	}
-	fmt.Println("New connection for %d", player.Id)
 	c := &Connection{Player: player, Out: make(chan []byte, 256), Conn: conn}
 	chat.register <- c
 	go c.write()
