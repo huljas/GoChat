@@ -1,43 +1,12 @@
-# Admin 
+# GoChat
 
-## Setting up
+Simple chat server written in Go.
 
-You will need [node.js and npm](http://nodejs.org).
+Uses [Gin] web framework for REST APIs and [Gorilla Websocket] for websockets. The chat implementation is based on the
+[chat example].
 
-Install `gulp`:
+Comes with a simple AngularJS front end.
 
-```sh
-$ npm install -g gulp
-```
-
-First install dependencies
-
-```sh
-$ npm install
-```
-
-## Development
-
-To build and watch changes in development mode
-
-```sh
-$ gulp
-```
-
-To access application, use for example python http server:
-
-```sh
-$ python -m SimpleHTTPServer
-```
-
-and open app in browser from `localhost:8000/dist/`
-
-## Build
-
-To build a production version:
-
-```sh
-$ gulp build
-```
-
-Production version is build in `dist` folder.
+[Gin]: https://github.com/gin-gonic/gin
+[Gorilla Websocket]: https://github.com/gorilla/websocket
+[chat example]: https://github.com/gorilla/websocket/tree/master/examples/chat

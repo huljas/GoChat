@@ -10,5 +10,4 @@ src/github.com/gorilla/
 *.iws
 bin/
 bower_components/
-dist/
 node_modules/
