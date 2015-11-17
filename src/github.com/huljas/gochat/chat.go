@@ -90,7 +90,7 @@ type Chat struct {
 }
 
 /**
- * Reads events from the broadcast queue and pushes them to the connection out queues.
+ * Reads events from the broadcast queue and pushes them to the out queues.
  */
 func (chat *Chat) run() {
 	for {
@@ -115,6 +115,7 @@ func (chat *Chat) run() {
 	}
 }
 
+// Singleton chat
 var chat = Chat{
 	broadcast:   make(chan []byte),
 	register:    make(chan *Connection),
